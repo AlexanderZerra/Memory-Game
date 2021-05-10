@@ -9,8 +9,8 @@
 ***
 # **Memory Game**
 
-## **The Pitch**
-**Memory games require players to randomly click a squre that shall reveal a photo. then do the same. If the two match up the board shall remove those squares from play allowing the player to continue until the board has been cleared. At a random selection of how the cards are placed the player will have to use memory to remember where cards were placed should they click on one that doesnt match**
+## **Welcome**
+**Memory games require a player to randomly click a square that shall reveal a photo. If the player guesses incorrectly the cards will return to the flipped position. This will require the player to guess again. If the player matches two on the board the game will remove those squares from play allowing the player to continue until the board has been cleared. The cards will be arranged at random at the start of each game. The player will have to use memory to remember where cards were placed. This is a great game to play. It boosts your memory skills !**
 ***
 
 ## **HTML Initial Framework**
@@ -22,6 +22,10 @@
 ***
 
 ## **CSS Secondary Redesign**
+**
+***
+
+## **CSS Final Design**
 **
 ***
 
@@ -43,8 +47,8 @@
 
 
 ## Updates
--  [] Initial Design
--  [] Secondary Design
+-  [] Initial Framework
+-  [] Secondary Framework
 -  [] Potentially Finished
 -  [] Finished Product [required for turn in]
 -  [] Potential future re-design [end of course ?]
