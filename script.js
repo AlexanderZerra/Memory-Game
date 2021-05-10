@@ -8,11 +8,10 @@
 
 //Need function for flipping cards over when clicked
 
-  //for loop to add event listeners to each card
+//for loop to add event listeners to each card
 // for (var i = 0; i < cards.length; i++){
 //   cards[i].addEventListener("click", displayCard);
 // };
-
 
 //Need function for flipping cards back over when clicked and are wrong
 
@@ -25,31 +24,45 @@
 //Need function/event/promp that tells user congrats when clearing the board
 
 //
+
 //creating a cards array with all the cards in them ? two for each card
-//it includes the name of the car and the img source of the card
+//it includes the name of the card and the img source of the card
 const cardsArray = [
-name:
-img:
+  {
+    name: 'Star',
+    img: '/images/Star.jpg',
 
-name:
-img:
-//
-name:
-img:
+    name: 'Star',
+    img: '/images/Star.jpg',
+    //
+    name: 'Hexagon',
+    img: '/images/Hexagon.jpg',
 
-name:
-img:
-//
-name:
-img:
+    name: 'Hexagon',
+    img: '/images/Hexagon.jpg',
+    //
+    name: 'Butterfly',
+    img: '/images/Butterfly.jpg',
 
-name:
-img:
-//
-name:
-img:
+    name: 'Butterfly',
+    img: '/images/Butterfly.jpg',
+    //
+    name: 'Pentagon',
+    img: '/images/Pentagon.jpg',
 
-name:
-img:
-//
+    name: 'Pentagon',
+    img: '/images/Pentagon.jpg',
+    //
+    name: 'Rectangle',
+    img: '/images/Rectangle.jpg',
+
+    name: 'Rectangle',
+    img: '/images/Rectangle.jpg',
+    //
+    name: 'Heart',
+    img: '/images/Heart/jpg',
+
+    name: 'Heart',
+    img: '/images/Heart/jpg'
+  }
 ]
