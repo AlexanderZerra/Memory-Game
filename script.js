@@ -29,6 +29,8 @@
 
 //creating a cards array with all the cards in them ? two for each card
 //it includes the name of the card and the img source of the card
+let comparison = []
+
 const cardsArray = [
   {
     name: 'Chicken',
@@ -53,30 +55,57 @@ const grid = document.querySelector('.grid')
 //Creating the board for the cards
 function createGameBoard() {
   for (let i = 0; i < cardsArray.length; i++) {
-    var card = document.createElement('img')
+    let card = document.createElement('img')
+    //eventually replace i with random image.
     card.setAttribute('src', 'Photos/Minecraft/BackCard.jpeg')
-    card.setAttribute('img-id', i)
+    card.setAttribute('id', i)
     grid.appendChild(card)
     //need to creat an event listener but it goes here ?
-    //card.addEventListener('click')
+    card.addEventListener('click', clickClick)
   }
 }
 createGameBoard()
 
-// flipping your card (or the idea of it flipping)
-
-function flippingCards(){
-  var cardPhoto =
-
+function clickClick(event) {
+  console.log(event.target.id)
+  if (comparison.length < 2) {
+    let index = event.target.id
+    flippingCards(index)
+    makeComparisonArray(index)
+  }
 }
 
+function flippingCards(index) {
+  document.getElementById(index).setAttribute('src', cardsArray[index].img)
+}
+
+function makeComparisonArray(index) {
+  comparison.push(index)
+  if (comparison.length === 2) {
+    checkComparison()
+  }
+}
+
+function checkComparison() {
+  console.log('running')
+  let card1 = cardsArray[comparison[0]].img
+  let card2 = cardsArray[comparison[1]].img
+  if (card1 === card2){
+    handleMatch()
+  }
+}
+
+function handleMatch
+
+// flipping your card (or the idea of it flipping)
+
+//
+
+// }
 
 // flipping the board
 
 // check for matching cards
-
-
-
 
 //for loop to add event listeners to each card
 // for (var i = 0; i < cardArr.length; i++){
@@ -85,7 +114,6 @@ function flippingCards(){
 
 // //event listener (example)
 // //document.getElementById("myBtn").addEventListener("click", displayDate);
-
 
 // // window.onload = function (event) {
 // //   // Random quote of the day generator
