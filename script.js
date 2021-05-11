@@ -90,12 +90,24 @@ function checkComparison() {
   console.log('running')
   let card1 = cardsArray[comparison[0]].img
   let card2 = cardsArray[comparison[1]].img
-  if (card1 === card2){
+  if (card1 === card2) {
     handleMatch()
+  } else {
+    misMatch()
   }
 }
 
-function handleMatch
+function handleMatch() {
+  //removes 2 cards that match from board
+  document
+    .getElementById(comparison[0])
+    .setAttribute('src', 'Photos/Minecraft/blank.png')
+  document
+    .getElementById(comparison[1])
+    .setAttribute('src', 'Photos/Minecraft/blank.png')
+}
+
+function misMatch() {}
 
 // flipping your card (or the idea of it flipping)
 
