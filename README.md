@@ -1,4 +1,4 @@
-# Memory-Game (need to refine title) 
+# Minecraft Memory  
 
 
 
@@ -7,7 +7,7 @@
 #### [Github](https://github.com/AlexanderZerra) | [LinkedIn](https://www.linkedin.com/in/alexander-zerra-a2737788/) | [Trello](https://trello.com/b/EHQdTol3/triple-h#)
 
 ***
-# **Memory Game**
+# **Minecraft Memory**
 
 ## **Welcome**
 **Memory games require a player to randomly click a square that shall reveal a photo. If the player guesses incorrectly the cards will return to the flipped position. This will require the player to guess again. If the player matches two on the board the game will remove those squares from play allowing the player to continue until the board has been cleared. The cards will be arranged at random at the start of each game. The player will have to use memory to remember where cards were placed. This is a great game to play. It boosts your memory skills!**
