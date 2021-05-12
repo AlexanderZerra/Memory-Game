@@ -13,59 +13,61 @@
 
 //Need function for counter for moves made/missed moves
 
-//Need function for flipping cards over when clicked
-
-//Need function for flipping cards back over when clicked and are wrong
-
-//Need function for eliminating cards off the board when matched
-
 //Need function for when game begins shows all cards
 
 //Need function for random card placement on board
 
 //Need function/event/promp that tells user congrats when clearing the board
 
+//Need set timer
+
+//Need Scoreboard
+
 //
 
 //creating a cards array with all the cards in them ? two for each card
 //it includes the name of the card and the img source of the card
 let comparison = []
-
 const cardsArray = [
-  {
-    name: 'Chicken',
-    img: 'Photos/Minecraft/Chicken.png'
-  },
-  {
-    name: 'Chicken',
-    img: 'Photos/Minecraft/Chicken.png'
-  },
-  {
-    name: 'creeper',
-    img: 'Photos/Minecraft/creeper.png'
-  },
-  {
-    name: 'creeper',
-    img: 'Photos/Minecraft/creeper.png'
-  },
-  {
-    name: 'Diamond',
-    img: 'Photos/Minecraft/Diamond.png'
-  },
-  {
-    name: 'Diamond',
-    img: 'Photos/Minecraft/Diamond.png'
-  }
+  'chicken',
+  'chicken',
+  'creeper',
+  'creeper',
+  'diamond',
+  'diamond',
+  'dirt',
+  'dirt',
+  'horse',
+  'horse',
+  'pickaxe',
+  'pickaxe',
+  'pig',
+  'pig',
+  'pigman',
+  'pigman',
+  'skeleton',
+  'skeleton',
+  'spider',
+  'spider',
+  'TNT',
+  'TNT'
 ]
-
 //Grid board for the cards pulled from HTML
 const grid = document.querySelector('.grid')
 //Creating the board for the cards
 function createGameBoard() {
+  function shuffleArray(arr) {
+    arr.sort(() => Math.random() - 0.5)
+  }
+  shuffleArray(cardsArray)
+
+  //generate random number in for Loop (shuffle)
+  //random number based on length of cardArray so it doesnt assign anything outside of that
   for (let i = 0; i < cardsArray.length; i++) {
     let card = document.createElement('img')
     //eventually replace i with random image.
-    card.setAttribute('src', 'Photos/Minecraft/BackCard.jpeg')
+
+    card.setAttribute('src', 'Photos/Minecraft/backCard.png')
     card.setAttribute('id', i)
     grid.appendChild(card)
     //need to creat an event listener but it goes here ?
@@ -84,20 +86,22 @@ function clickClick(event) {
 }
 
 function flippingCards(index) {
-  document.getElementById(index).setAttribute('src', cardsArray[index].img)
+  document
+    .getElementById(index)
+    .setAttribute('src', `Photos/Minecraft/${cardsArray[index]}.png`)
 }
 
 function makeComparisonArray(index) {
   comparison.push(index)
   if (comparison.length === 2) {
+    //set timer
     checkComparison()
   }
 }
 
 function checkComparison() {
-  console.log('running')
-  let card1 = cardsArray[comparison[0]].img
-  let card2 = cardsArray[comparison[1]].img
+  let card1 = cardsArray[comparison[0]]
+  let card2 = cardsArray[comparison[1]]
   if (card1 === card2) {
     handleMatch()
     //set timeout
@@ -105,6 +109,7 @@ function checkComparison() {
     misMatch()
     //set timeout
   }
+  comparison = []
 }
 
 function handleMatch() {
@@ -120,47 +125,12 @@ function handleMatch() {
 function misMatch() {
   document
     .getElementById(comparison[0])
-    .setAttribute('src', 'Photos/Minecraft/BackCard.jpeg')
+    .setAttribute('src', 'Photos/Minecraft/backCard.png')
   document
     .getElementById(comparison[1])
-    .setAttribute('src', 'Photos/Minecraft/BackCard.jpeg')
+    .setAttribute('src', 'Photos/Minecraft/backCard.png')
 }
-
-// flipping your card (or the idea of it flipping)
-
-//
-
-// }
 
 // flipping the board
 
-// check for matching cards
-
-//for loop to add event listeners to each card
-// for (var i = 0; i < cardArr.length; i++){
-//   cardArr[i].addEventListener("click",);
-// };
-
-// //event listener (example)
-// //document.getElementById("myBtn").addEventListener("click", displayDate);
-
-// // window.onload = function (event) {
-// //   // Random quote of the day generator
-// //   const randomQuote = function () {
-// //     document.querySelector('#quote-of-the-day').textContent = `"${
-// //       quotes[Math.floor(Math.random() * quotes.length)]
-// //     }"`
-// //   }
-// //   randomQuote()
-
-// // document.querySelectorAll('.cell').forEach(function (cell) {
-//   cell.addEventListener('click', makeYourMove)
-// })
-
-// document.querySelector('.button').addEventListener('click', startGame)
-
-// // document.querySelectorAll('.cell').forEach(function (cell) {
-// //   cell.addEventListener('click', makeYourMove)
-// // })
-
-// // document.querySelector('.button').addEventListener('click', startGame)
+//Math logic
