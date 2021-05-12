@@ -58,9 +58,6 @@ const cardsArray = [
 const grid = document.querySelector('.grid')
 //Creating the board for the cards
 function createGameBoard() {
-  function shuffleArray(arr) {
-    arr.sort(() => Math.random() - 0.5)
-  }
   shuffleArray(cardsArray)
 
   //generate random number in for Loop (shuffle)
@@ -76,8 +73,10 @@ function createGameBoard() {
     card.addEventListener('click', clickClick)
   }
 }
-createGameBoard()
 
+function shuffleArray(arr) {
+  arr.sort(() => Math.random() - 0.5)
+}
 function clickClick(event) {
   console.log(event.target.id)
   if (comparison.length < 2) {
@@ -97,7 +96,9 @@ function makeComparisonArray(index) {
   comparison.push(index)
   if (comparison.length === 2) {
     //set timer
-    checkComparison()
+    setTimeout(() => checkComparison(), 1000)
+
+    //checkComparison()
   }
 }
 
@@ -106,7 +107,6 @@ function checkComparison() {
   let card2 = cardsArray[comparison[1]]
   if (card1 === card2) {
     handleMatch()
-    //set timeout
   } else {
     misMatch()
     //set timeout
@@ -132,6 +132,7 @@ function misMatch() {
     .getElementById(comparison[1])
     .setAttribute('src', 'Photos/Minecraft/backCard.png')
 }
+createGameBoard()
 
 // flipping the board
 
