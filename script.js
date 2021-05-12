@@ -47,6 +47,14 @@ const cardsArray = [
   {
     name: 'creeper',
     img: 'Photos/Minecraft/creeper.png'
+  },
+  {
+    name: 'Diamond',
+    img: 'Photos/Minecraft/Diamond.png'
+  },
+  {
+    name: 'Diamond',
+    img: 'Photos/Minecraft/Diamond.png'
   }
 ]
 
@@ -92,8 +100,10 @@ function checkComparison() {
   let card2 = cardsArray[comparison[1]].img
   if (card1 === card2) {
     handleMatch()
+    //set timeout
   } else {
     misMatch()
+    //set timeout
   }
 }
 
@@ -107,7 +117,14 @@ function handleMatch() {
     .setAttribute('src', 'Photos/Minecraft/blank.png')
 }
 
-function misMatch() {}
+function misMatch() {
+  document
+    .getElementById(comparison[0])
+    .setAttribute('src', 'Photos/Minecraft/BackCard.jpeg')
+  document
+    .getElementById(comparison[1])
+    .setAttribute('src', 'Photos/Minecraft/BackCard.jpeg')
+}
 
 // flipping your card (or the idea of it flipping)
 
