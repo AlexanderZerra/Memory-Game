@@ -50,7 +50,9 @@ const cardsArray = [
   'spider',
   'spider',
   'TNT',
-  'TNT'
+  'TNT',
+  'enderman',
+  'enderman'
 ]
 //Grid board for the cards pulled from HTML
 const grid = document.querySelector('.grid')
