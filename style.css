@@ -27,11 +27,26 @@ h1 {
   align-items: center;
   font-size: 75px;
   opacity: 0.8;
-
   font-weight: 800;
   text-shadow: 4px 4px 4px white;
 }
-
+main {
+  display: flex;
+  justify-content: center;
+}
+span {
+  width: 20vw;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 900;
+  font-size: 35px;
+  justify-content: center;
+}
+.missed {
+  text-shadow: 4px 4px 4px red;
+}
+.made {
+  text-shadow: 4px 4px 4px greenyellow;
+}
 /* need to build a gameboard and determine its size*/
 
 /* need to determine the size of each card */
