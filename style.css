@@ -1,15 +1,25 @@
-.grid {
+/* .grid {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   height: 500px;
   width: 700px;
   margin: auto;
+} */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-content: stretch;
+  align-items: center;
+  width: 60vw;
 }
 img {
-  height: 70px;
   width: 100px;
-  margin: 3px 8px 8px 5px;
+  height: 100px;
+  margin: 5px;
+  justify-self: center;
+  align-self: center;
 }
 body {
   background-image: url('Photos/MineCraft/sunset.jpeg');
@@ -22,6 +32,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 h1 {
   font-family: 'Press Start 2P', cursive;
   align-items: center;
@@ -29,6 +40,11 @@ h1 {
   opacity: 0.8;
   font-weight: 800;
   text-shadow: 4px 4px 4px white;
+}
+h2 {
+  font-family: 'Press Start 2p', cursive;
+  color: white;
+  text-shadow: 4px 4px 4px black;
 }
 main {
   display: flex;
@@ -39,13 +55,20 @@ span {
   font-family: 'Press Start 2P', cursive;
   font-weight: 900;
   font-size: 35px;
-  justify-content: center;
 }
 .missed {
   text-shadow: 4px 4px 4px red;
+  color: white;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
 }
 .made {
   text-shadow: 4px 4px 4px greenyellow;
+  color: white;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
 }
 /* need to build a gameboard and determine its size*/
 

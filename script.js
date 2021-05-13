@@ -27,6 +27,7 @@
 
 //creating a cards array with all the cards in them ? two for each card
 //it includes the name of the card and the img source of the card
+let counter = 0
 let comparison = []
 const cardsArray = [
   'chicken',
@@ -107,6 +108,10 @@ function checkComparison() {
   let card2 = cardsArray[comparison[1]]
   if (card1 === card2) {
     handleMatch()
+    // counter = 0
+    // let score = document.querySelector('#score')
+    // score++
+    // document.querySelector('#score') = score
   } else {
     misMatch()
     //set timeout
