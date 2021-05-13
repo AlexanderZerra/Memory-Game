@@ -1,13 +1,15 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
-  width: 600px;
+  flex-direction: row;
+  height: 500px;
+  width: 700px;
   margin: auto;
 }
 img {
-  height: 100px;
+  height: 70px;
   width: 100px;
+  margin: 3px 8px 8px 5px;
 }
 body {
   background-image: url('Photos/MineCraft/sunset.jpeg');
