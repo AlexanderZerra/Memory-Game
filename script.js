@@ -137,3 +137,5 @@ createGameBoard()
 // let score = document.querySelector('#score')
 // score++
 // document.querySelector('#score') = score
+
+document.querySelector('.button').addEventListener('click', startGame)
