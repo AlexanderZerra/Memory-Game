@@ -70,6 +70,14 @@ span {
   align-content: center;
   justify-content: center;
 }
+button {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  background-color: black;
+  color: grey;
+  font-family: 'Press Start 2P', cursive;
+}
 /* need to build a gameboard and determine its size*/
 
 /* need to determine the size of each card */

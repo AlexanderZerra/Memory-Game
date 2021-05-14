@@ -15,8 +15,6 @@
 
 //Need function for when game begins shows all cards
 
-//Need function for random card placement on board
-
 //Need function/event/promp that tells user congrats when clearing the board
 
 //Need set timer
@@ -108,10 +106,6 @@ function checkComparison() {
   let card2 = cardsArray[comparison[1]]
   if (card1 === card2) {
     handleMatch()
-    // counter = 0
-    // let score = document.querySelector('#score')
-    // score++
-    // document.querySelector('#score') = score
   } else {
     misMatch()
     //set timeout
@@ -139,6 +133,7 @@ function misMatch() {
 }
 createGameBoard()
 
-// flipping the board
-
-//Math logic
+// counter = 0
+// let score = document.querySelector('#score')
+// score++
+// document.querySelector('#score') = score
