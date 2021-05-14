@@ -67,6 +67,7 @@ function createGameBoard() {
 
     card.setAttribute('src', 'Photos/Minecraft/backCard.png')
     card.setAttribute('id', i)
+
     grid.appendChild(card)
     //need to creat an event listener but it goes here ?
     card.addEventListener('click', clickClick)
@@ -108,6 +109,7 @@ function checkComparison() {
     handleMatch()
   } else {
     misMatch()
+
     //set timeout
   }
   comparison = []
@@ -131,11 +133,21 @@ function misMatch() {
     .getElementById(comparison[1])
     .setAttribute('src', 'Photos/Minecraft/backCard.png')
 }
+
+function restart() {
+  grid.innerHTML = null
+  createGameBoard()
+}
+
 createGameBoard()
+document.querySelector('.restart').addEventListener('click', restart)
+
+// const animate = document.querySelector('.grid')
+// animate.classList.add('animate__animated', 'animate__shakeX')
 
 // counter = 0
 // let score = document.querySelector('#score')
 // score++
 // document.querySelector('#score') = score
 
-document.querySelector('.button').addEventListener('click', startGame)
+// document.querySelector('.button').addEventListener('click', startGame)
