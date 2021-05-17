@@ -41,11 +41,7 @@ h1 {
   font-weight: 800;
   text-shadow: 4px 4px 4px white;
 }
-h2 {
-  font-family: 'Press Start 2p', cursive;
-  color: white;
-  text-shadow: 4px 4px 4px black;
-}
+
 main {
   display: flex;
   justify-content: center;
@@ -73,11 +69,48 @@ span {
 .buttons {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   font-family: 'Press Start 2P', cursive;
+  width: 100vw;
+  justify-content: space-around;
 }
 
+.main {
+  float: left;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+.restart {
+  float: right;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+.madeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.missedContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.missedDisplay {
+  font-size: 50px;
+  font-family: 'Audiowide', cursive;
+  color: red;
+}
+.madeDisplay {
+  font-size: 50px;
+  font-family: 'Audiowide', cursive;
+  color: greenyellow;
+}
 /* need to build a gameboard and determine its size*/
 
 /* need to determine the size of each card */

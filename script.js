@@ -1,31 +1,9 @@
-// const game = () => {
-//   let userName = prompt('What is your name adventurer ?')
-//   alert(`Hello ${userName}`)
-//   alert(`Lets Play`)
-// }
-// game()
-
-//All javascript logic for game
-
-//Need global variables
-
-//Need function for win
-
-//Need function for counter for moves made/missed moves
-
-//Need function for when game begins shows all cards
-
-//Need function/event/promp that tells user congrats when clearing the board
-
-//Need set timer
-
-//Need Scoreboard
-
-//
-
-//creating a cards array with all the cards in them ? two for each card
-//it includes the name of the card and the img source of the card
 let counter = 0
+let score = document.querySelector('#score')
+let madeDisplay = document.querySelector('.madeDisplay')
+let missedDisplay = document.querySelector('.missedDisplay')
+let madeTracker = 0
+let missedTracker = 0
 let comparison = []
 const cardsArray = [
   'chicken',
@@ -57,19 +35,20 @@ const cardsArray = [
 const grid = document.querySelector('.grid')
 //Creating the board for the cards
 function createGameBoard() {
+  madeDisplay.innerHTML = madeTracker
+  missedDisplay.innerHTML = missedTracker
   shuffleArray(cardsArray)
 
   //generate random number in for Loop (shuffle)
   //random number based on length of cardArray so it doesnt assign anything outside of that
   for (let i = 0; i < cardsArray.length; i++) {
     let card = document.createElement('img')
-    //eventually replace i with random image.
 
     card.setAttribute('src', 'Photos/Minecraft/backCard.png')
     card.setAttribute('id', i)
 
     grid.appendChild(card)
-    //need to creat an event listener but it goes here ?
+
     card.addEventListener('click', clickClick)
   }
 }
@@ -97,8 +76,6 @@ function makeComparisonArray(index) {
   if (comparison.length === 2) {
     //set timer
     setTimeout(() => checkComparison(), 1000)
-
-    //checkComparison()
   }
 }
 
@@ -106,8 +83,12 @@ function checkComparison() {
   let card1 = cardsArray[comparison[0]]
   let card2 = cardsArray[comparison[1]]
   if (card1 === card2) {
+    madeTracker++
+    madeDisplay.innerHTML = madeTracker
     handleMatch()
   } else {
+    missedTracker++
+    missedDisplay.innerHTML = missedTracker
     misMatch()
 
     //set timeout
@@ -136,18 +117,11 @@ function misMatch() {
 
 function restart() {
   grid.innerHTML = null
+  madeTracker = 0
+  missedTracker = 0
   createGameBoard()
 }
 
 createGameBoard()
+
 document.querySelector('.restart').addEventListener('click', restart)
-
-// const animate = document.querySelector('.grid')
-// animate.classList.add('animate__animated', 'animate__shakeX')
-
-// counter = 0
-// let score = document.querySelector('#score')
-// score++
-// document.querySelector('#score') = score
-
-// document.querySelector('.button').addEventListener('click', startGame)

@@ -16,21 +16,27 @@
     <link rel= "stylesheet" href="style.css"></link>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   </head>
 <body>
   <h1>Memory Game</h1>
-  <h2>Score</h2>
+  
   <main>
-    <span class = "made">Moves Made</span>
-    <div class="grid">
+    <div class="madeContainer">
+    <span class = "made">Matches Made</span>
+    <p class = "madeDisplay"></p>
     </div>
-    <span class= "missed">Moves Missed</span>
+  <div class="grid"></div>
+    <div class ="missedContainer">
+      <span class= "missed">Moves Missed</span>
+      <p class = "missedDisplay"></p>
+    </div>
   </main>
   <div class= "buttons">
-    <button><a href="index.html">Main Menu</a></button>
-    <button class = "restart">Restart</button>
+    <button class = "main"><a href="index.html">Main Menu</a></button>
     <audio controls autoplay loop><source src= "images/audio/minecraftMusic.mp3" type="audio/mpeg"/></audio>
+    <button class = "restart">Restart</button>
   </div>
 </body>
 <script src="script.js" charset="utf-8"></script>
