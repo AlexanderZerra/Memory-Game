@@ -4,7 +4,7 @@
 
 ### Date: 5/09/2021 
 ### By: Alex Zerra
-#### [Github](https://github.com/AlexanderZerra) | [LinkedIn](https://www.linkedin.com/in/alexander-zerra-a2737788/) | [Trello](https://trello.com/b/EHQdTol3/triple-h#)
+#### [Github](https://github.com/AlexanderZerra) | [LinkedIn](https://www.linkedin.com/in/alexander-zerra-a2737788/) | [Trello](https://trello.com/b/EHQdTol3/triple-h#) | [Deployed Game](https://alexanderzerra.github.io/Memory-Game/index.html)
 
 ***
 # **Minecraft Memory**
@@ -41,6 +41,7 @@
 * [w3schools](https://www.w3schools.com/) 
 * [mozdeveloper](https://developer.mozilla.org/en-US/) 
 * [CSStricks](https://css-tricks.com/)
+* [clipArt](http://clipart-library.com/)
 * Hunter for his photoshop help on my photos. 
 * All links posted were extremely helpful in the knowledge they provide. 
 * 
