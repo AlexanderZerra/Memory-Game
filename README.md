@@ -34,7 +34,7 @@
 -  [x] Secondary Framework
 -  [x] Potentially Finished
 -  [x] Finished Product [required for turn in]
--  [] Potential future re-design [end of course ?]
+-  [ ] Potential future re-design [end of course ?]
 ***
 
 ## Credit
