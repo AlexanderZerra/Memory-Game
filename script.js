@@ -57,7 +57,6 @@ function shuffleArray(arr) {
   arr.sort(() => Math.random() - 0.5)
 }
 function clickClick(event) {
-  console.log(event.target.id)
   if (comparison.length < 2) {
     let index = event.target.id
     flippingCards(index)
@@ -74,7 +73,6 @@ function flippingCards(index) {
 function makeComparisonArray(index) {
   comparison.push(index)
   if (comparison.length === 2) {
-    //set timer
     setTimeout(() => checkComparison(), 1000)
   }
 }
@@ -97,7 +95,6 @@ function checkComparison() {
 }
 
 function handleMatch() {
-  //removes 2 cards that match from board
   document
     .getElementById(comparison[0])
     .setAttribute('src', 'Photos/Minecraft/blank.png')
